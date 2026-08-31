@@ -1,7 +1,6 @@
 # SDAD: Similarity-Informed Discretization for Unsupervised Time Series Anomaly Detection
 
 <p align="center">
-  <strong>Similarity-guided Discrete-code Anomaly Detection (SDAD)</strong><br>
   Reproducible implementation and evaluation on the Server Machine Dataset (SMD)
 </p>
 
