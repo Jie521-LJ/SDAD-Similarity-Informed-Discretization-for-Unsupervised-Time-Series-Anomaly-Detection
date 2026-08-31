@@ -18,14 +18,6 @@ This repository contains the reproducible code package for **SDAD**, an unsuperv
 
 The provided implementation learns normal temporal patterns from the **training split only** and evaluates anomaly scores on selected machines from the **Server Machine Dataset (SMD)**. The package includes the SDAD pipeline, lightweight deep-learning baselines, traditional anomaly-detection baselines, and scripts for generating the final evaluation materials.
 
-The main SDAD implementation evaluates several complementary anomaly signals:
-
-- **Reconstruction error** from the VQ-VAE backbone.
-- **Dimension-normalized Top-K reconstruction score**, which emphasizes a small number of highly abnormal variables instead of averaging errors over all dimensions.
-- **Discrete token rarity**, measuring how unusual the assigned VQ codes are relative to normal training windows.
-- **Token-transition rarity**, measuring unusual transitions between consecutive discrete codes.
-- **Composite score**, combining reconstruction, token-rarity, and transition-rarity information.
-
 
 ## Included SMD Subsets
 
