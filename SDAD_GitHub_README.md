@@ -263,6 +263,3 @@ When redistributing or publishing results based on SMD, please follow the origin
 
 If you use this code in academic work, please cite the corresponding SDAD paper. The final BibTeX entry can be added here when the publication metadata are available.
 
-## Contact
-
-For questions about reproducing the experiments, please open an issue in this repository and include the machine subset, operating system, Python/PyTorch version, and relevant error log.
