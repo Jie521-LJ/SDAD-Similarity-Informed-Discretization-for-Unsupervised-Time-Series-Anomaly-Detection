@@ -26,28 +26,6 @@ The main SDAD implementation evaluates several complementary anomaly signals:
 - **Token-transition rarity**, measuring unusual transitions between consecutive discrete codes.
 - **Composite score**, combining reconstruction, token-rarity, and transition-rarity information.
 
-## Pipeline
-
-```mermaid
-flowchart LR
-    A[Normal SMD training series] --> B[Train-based normalization]
-    B --> C[Sliding windows]
-    C --> D[VQ-VAE backbone]
-    D --> E1[Reconstruction errors]
-    D --> E2[Discrete tokens]
-    E1 --> F1[Dimension-wise robust normalization]
-    F1 --> G1[Top-K / Mean scores]
-    E2 --> F2[Token rarity]
-    E2 --> F3[Transition rarity]
-    E1 --> G2[Reconstruction score]
-    F2 --> G3[Discrete-code scores]
-    F3 --> G3
-    G1 --> H[Anomaly scoring]
-    G2 --> H
-    G3 --> H
-    H --> I[Train-quantile threshold + post-processing]
-    I --> J[Evaluation on SMD test labels]
-```
 
 ## Included SMD Subsets
 
